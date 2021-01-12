@@ -2,13 +2,13 @@ language: node_js
 node_js:
   - "12.18.2"
 install: npm install
-script:
-  #- xvfb-maybe node_modules/.bin/karma start test/unit/karma.conf.js
-  #- yarn run pack && xvfb-maybe node_modules/.bin/mocha test/e2e
-  - npm run release
+# script:
+#- xvfb-maybe node_modules/.bin/karma start test/unit/karma.conf.js
+#- yarn run pack && xvfb-maybe node_modules/.bin/mocha test/e2e
+# - npm run release
 # - yarn run build:docs
-before_script:
-  - git pull origin dva-dem
+# before_script:
+#   - git pull origin dva-dem
 branches:
   only:
     - master
@@ -16,7 +16,8 @@ branches:
 cache:
   directories:
     - node_modules
-# after_script:
+after_script:
+  - npm run release
 #   - cd ./public
 #   - git init
 #   - git config user.name "jackobj"
