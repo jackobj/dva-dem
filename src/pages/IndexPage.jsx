@@ -33,7 +33,7 @@ const IndexPage = (props) =>{
   }
   useEffect(() => {
     console.log(111111)
-    if(state == 'this is hoos'){
+    if(state === 'this is hoos'){
       settmp('当state改变我也要改变')
 
     }

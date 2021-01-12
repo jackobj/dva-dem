@@ -1,0 +1,12 @@
+language: node_js
+install: npm install
+script:
+  #- xvfb-maybe node_modules/.bin/karma start test/unit/karma.conf.js
+  #- yarn run pack && xvfb-maybe node_modules/.bin/mocha test/e2e
+  - npm run release
+# - yarn run build:docs
+before_script:
+  - git lfs pull
+branches:
+  only:
+    - master
