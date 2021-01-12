@@ -1,6 +1,7 @@
 {
   "private": true,
   "scripts": {
+    "clean":"python scripts/clean.py",
     "release":"npm run build && npm run python",
     "python":"python scripts/test.py",
     "start": "roadhog server",
